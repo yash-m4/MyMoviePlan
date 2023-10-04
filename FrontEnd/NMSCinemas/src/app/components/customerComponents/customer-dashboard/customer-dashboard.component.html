@@ -1,0 +1,43 @@
+<div style="margin-left: 80mm; position: relative; bottom: 23.5mm; width: 160mm;">
+    <input type="text" placeholder="  Search For Movies, Ex. Avengers, Suzume" name="search" [(ngModel)]="search" 
+    style="width: 120mm; height: 8mm; font-family: monospace; border-radius: 1mm;">
+    <button style="background-color: rgb(240, 73, 73); width: 20mm; height: 7.5mm; margin-left: 5mm; border-radius: 1.5mm; color: white;" (click)="searchProduct()">Search</button>
+    </div>
+
+    <div id="mainDiv">
+    <div id="three">
+                    <div class="submenu" *ngFor="let gen of genres">
+                        <a mat-list-item (click)="selectCategory(gen.id)">{{gen.name}}</a>
+                    </div>
+                    <div *ngIf="showAll" class="submenu" style="background-color: rgb(195, 227, 255);" >
+                      <a  (click)="showAllmethod()">View All Movies</a>
+                  </div>
+    </div>
+    <div id="seven">
+    
+    <!-- <button *ngIf="showReinitializeButton" (click)="ngOnInit()" style="width: 50mm; height: 7.5mm; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;margin-left: 10mm; margin-bottom: 2.5mm;border: none; width: 60mm; height: 10mm; background-color: rgb(171, 217, 243); font-family: monospace; text-align: center; font-size: 5mm;">View All Products</button>
+     <div class="category" style="display: flex; flex-basis: calc(20% - 20px);flex-wrap: wrap; justify-content: space-between;">
+       <div *ngFor="let gen of genres">
+        <button (click)="selectCategory(gen.id)" style="margin-left: 10mm; margin-top: 2mm;margin-bottom: 2mm; margin-right: 10mm; border: none; width: 60mm; height: 10mm; background-color: whitesmoke; font-family: monospace; text-align: center; font-size: 5mm; position: relative;">{{gen.name}}</button>
+       </div>
+         </div> -->
+      
+    <div class="container">
+     
+        <div class="product-row" *ngFor="let movie of movies;">
+          <div class="product">
+            <img id='imga' [src]="getBase64Image(movie.imageData)" alt="Product Image" class="product-image" />
+            <div class="product-details">
+              <p><strong> {{ movie.name }}</strong></p>
+              <p><strong>Price:</strong> {{ movie.price }} ₹</p>
+              <div *ngFor="let genre of genres">
+                <p *ngIf="genre.id === movie.genreId"><strong>Genre:</strong> {{ genre.name }}</p>
+              </div>
+             <button id="buyb" (click)="buyNow(movie.id)">Book Now</button>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

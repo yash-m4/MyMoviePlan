@@ -1,0 +1,40 @@
+<div class="payment-container">
+    <div class="payment-summary">
+      <h2>Booking Summary</h2>
+      <div>
+        <div>
+          <img id='imga' [src]="getBase64Image(moviee.imageData)" alt="Product Image" class="product-image" />
+        </div>
+        <p><strong>Movie Name:</strong> {{ moviee.name }}</p>
+        <p><strong>Show Timing:</strong> {{ moviee.slots }}</p>
+        <p><strong>Total Price:</strong> {{ moviee.price * counter }}</p>
+      </div>
+    </div>
+  
+    <div class="payment-form">
+      <h2>Payment Information</h2>
+      <form>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required [(ngModel)]="cardNumber" (input)="checkFormValidity()">
+  
+        <label for="nameOnCard">Name on Card:</label>
+        <input type="text" id="nameOnCard" name="nameOnCard" required [(ngModel)]="nameOnCard" (input)="checkFormValidity()">
+  
+        <label for="expiryMonth">Expiry Date (MM/YYYY):</label>
+        <input type="text" id="expiryMonth" name="expiryMonth" placeholder="MM" required [(ngModel)]="expiryMonth" (input)="checkFormValidity()">
+        <input type="text" id="expiryYear" name="expiryYear" placeholder="YYYY" required [(ngModel)]="expiryYear" (input)="checkFormValidity()">
+  
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required [(ngModel)]="cvv" (input)="checkFormValidity()">
+  
+        <button *ngIf="!showPaymentMessage" type="button" (click)="makePayment()" [disabled]="!formIsValid">Pay</button>
+      </form>
+       <div class="payment-message" *ngIf="showPaymentMessage">
+      <p>Your tickets will be sent to:</p>
+      <p>{{email}}</p>
+    </div>
+    </div>
+  
+   
+  </div>
+  

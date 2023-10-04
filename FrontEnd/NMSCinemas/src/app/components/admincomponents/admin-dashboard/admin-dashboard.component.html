@@ -1,0 +1,28 @@
+<!-- <mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+  </mat-toolbar> -->
+  
+<mat-sidenav-container class="example-container" autosize>
+	<mat-sidenav #sidenav id="sidenav" class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+		<mat-nav-list>
+			<mat-list-item (click)="admin = !admin" class="parent">
+				<div class="menu-content"> 
+					<mat-icon mat-list-icon >menu</mat-icon>
+					<span class="full-width" *ngIf="isExpanded || isShowing">Admin Functions</span>
+					<mat-icon class="menu-button" [ngClass]="{'rotated' : admin}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+				</div>
+			</mat-list-item>
+			<div class="submenu" [ngClass]="{'expanded' : admin}" *ngIf="isShowing || isExpanded">
+				<a mat-list-item (click)="navigateTo('/adminDashboard/adminGenre')">Add Genre</a>
+				<a mat-list-item (click)="navigateTo('/adminDashboard/adminMovies')">Add Movies</a>
+				<a mat-list-item (click)="navigateTo('/adminDashboard/adminEditGenre')">Edit Genre</a>
+				<a mat-list-item (click)="navigateTo('/adminDashboard/adminEditMovie')">Edit Movies</a>
+			</div>
+		</mat-nav-list>
+    <mat-nav-list>
+</mat-nav-list>
+	</mat-sidenav>
+	<div class="example-sidenav-content">
+		<router-outlet></router-outlet>
+	  </div>
+</mat-sidenav-container>

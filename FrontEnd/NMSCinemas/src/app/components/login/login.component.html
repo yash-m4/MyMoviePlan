@@ -1,0 +1,42 @@
+<div id="login" *ngIf="isLogin">
+<p style="font-family: monospace; font-size: 5mm; padding-left: 28mm; padding-top: 4mm; padding-bottom: 3mm; background-color: rgb(247, 106, 106);">Welcome Back</p>
+<h2>Please Login</h2>
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 38mm; padding-bottom: 2mm;">Email</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm; margin-left:13.5mm;" type="text" placeholder="Please enter Your Email" name="email" [(ngModel)]="email">
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 36mm; padding-bottom: 2mm; padding-top: 2mm;">Password</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm;  margin-left:13.5mm; "  type="text" placeholder="Please enter Your Password" name="email" [(ngModel)]="password"><br>
+<br> <button
+style="width: 20mm; height: 7mm; background-color: rgb(231, 87, 87); margin-left: 35mm; border-radius: 1mm;"
+type="button"
+(click)="login()"
+[disabled]="!(email && password)"
+>
+Login
+</button><br><br><br><br><br><br><br><br>
+<p>New Here?</p>
+<button style="width: 20mm ; height: 7mm; background-color: rgb(84, 216, 124); border-radius: 1mm;" type="button" (click)="lTOr()">Register</button>
+</div>
+<div id="register" *ngIf="!isLogin">
+<p style="font-family: monospace; font-size: 5mm; padding-left: 18mm; padding-top: 4mm; padding-bottom: 3mm; background-color: rgb(247, 221, 106);">Welcome to MyMoviePlan</p>
+<h3>Please Register</h3>
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 38mm; padding-bottom: 2mm;">Email</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm;  margin-left:13.5mm; " type="text" placeholder="Please enter Your Email" name="email" [(ngModel)]="email">
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 38mm; padding-bottom: 2mm;">Phone No.</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm;  margin-left:13.5mm; " type="text" placeholder="Please enter Your Phone No." name="phone" [(ngModel)]="phone">
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 38mm; padding-bottom: 2mm;">First Name</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm;  margin-left:13.5mm; " type="text" placeholder="Please enter Your FirstName" name="firstName" [(ngModel)]="firstName">
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 38mm; padding-bottom: 2mm;">Last Name</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm;  margin-left:13.5mm; " type="text" placeholder="Please enter Your Last Name" name="lastName" [(ngModel)]="lastName">
+<legend style="font-family: monospace; font-size: 4mm; padding-left: 38mm; padding-bottom: 2mm;">Password</legend>
+<input style="width: 60mm; height: 7mm; text-align: center; border-radius: 1mm;  margin-left:13.5mm; " type="text" placeholder="Please Create Your Password" name="password" [(ngModel)]="password">
+<br><br><button
+style="width: 20mm; height: 7mm; background-color: rgb(221, 187, 34); margin-left: 35mm; border-radius: 1mm;"
+type="button"
+(click)="register()"
+[disabled]="!(email && password && firstName && lastName && phone)"
+>
+Register
+</button>
+<p>Already have an Account</p>
+<button style="width: 20mm ; height: 7mm; background-color: rgb(87, 169, 172); border-radius: 1mm;" type="button" (click)="lTOr()">Login</button>
+</div>

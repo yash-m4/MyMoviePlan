@@ -1,0 +1,20 @@
+#delete{
+    background-color: rgb(190, 42, 42);
+    width: 40mm;
+    height: 7.5mm;
+    border-radius: 1mm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+}
+td{
+   text-align: center; 
+   padding: 5mm 5mm 5mm 5mm;
+   font-family: monospace;
+   font-size: 5mm;
+
+}
+th{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6mm; 
+    border: 2px solid rgb(226, 114, 114);
+}

@@ -1,0 +1,16 @@
+/* :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  } */
+input{
+  width: 80mm;
+  height: 10mm;
+  border-radius: 2mm;
+  text-align: center;
+  font-family: monospace;
+  margin-left: 5mm;
+}
+mat-form-field{
+margin-left: 5mm;
+}

@@ -1,0 +1,198 @@
+<div class="container">
+
+      
+      <div>
+        <img id='imga' [src]="getBase64Image(moviee.imageData)" alt="Product Image" class="product-image" />
+       </div>
+        <div class="product-details">
+          <table>
+            <tr>
+              <th id="fth"><p><strong>Name:</strong></p></th>
+              <th ><p><strong>Price:</strong></p></th>
+              <th><p><strong>Show Timing:</strong></p></th>
+            </tr>
+            <tr>
+              <td >{{ moviee.name }}</td>
+              <td>{{ moviee.price }}</td>
+              <td>{{ moviee.slots }}</td>
+            </tr>
+          </table>
+          
+          
+          <h2 style="margin-top: 5mm; margin-left: 73mm;">Select Seats</h2>
+          
+        
+
+          <table>
+            <tr>
+             <td> <input
+              type="text" value="1" readonly
+              [ngStyle]="{ 'background-color': seatsc1 === 1 ? 'red' : (seats1 === 0 ? 'white' : 'green') }"
+              (click)="onClick()"
+              [disabled]="seatsc1 === 1"  class="sseat"/>
+            </td>
+             <td><input
+              type="text"
+             value="2" readonly
+              [ngStyle]="{ 'background-color': seatsc2 === 1 ? 'red' : (seats2 === 0 ? 'white' : 'green') }"
+              (click)="onClick2()"
+              [disabled]="seatsc2 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              value="3" readonly
+             
+              [ngStyle]="{ 'background-color': seatsc3 === 1 ? 'red' : (seats3 === 0 ? 'white' : 'green') }"
+              (click)="onClick3()"
+              [disabled]="seatsc3 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              value="4" readonly
+              readonly
+              [ngStyle]="{ 'background-color': seatsc4 === 1 ? 'red' : (seats4 === 0 ? 'white' : 'green') }"
+              (click)="onClick4()"
+              [disabled]="seatsc4 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              value="5" readonly
+              readonly
+              
+              [ngStyle]="{ 'background-color': seatsc5 === 1 ? 'red' : (seats5 === 0 ? 'white' : 'green') }"
+              (click)="onClick5()"
+              [disabled]="seatsc5 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              value="6" readonly
+              
+              [ngStyle]="{ 'background-color': seatsc6 === 1 ? 'red' : (seats6 === 0 ? 'white' : 'green') }"
+              (click)="onClick6()"
+              [disabled]="seatsc6 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              value="7" readonly
+              
+              [ngStyle]="{ 'background-color': seatsc7 === 1 ? 'red' : (seats7 === 0 ? 'white' : 'green') }"
+              (click)="onClick7()"
+              [disabled]="seatsc7 === 1"  class="sseat"/></td>
+             <td><input
+              type="text"
+              value="8" readonly
+              
+              [ngStyle]="{ 'background-color': seatsc8 === 1 ? 'red' : (seats8 === 0 ? 'white' : 'green') }"
+              (click)="onClick8()"
+              [disabled]="seatsc8 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              value="9" readonly
+              
+              [ngStyle]="{ 'background-color': seatsc9 === 1 ? 'red' : (seats9 === 0 ? 'white' : 'green') }"
+              (click)="onClick9()"
+              [disabled]="seatsc9 === 1" class="sseat"/></td>
+             <td><input
+              type="text"
+              [value]="10" readonly
+              
+              [ngStyle]="{ 'background-color': seatsc10 === 1 ? 'red' : (seats10 === 0 ? 'white' : 'green') }"
+              (click)="onClick10()"
+              [disabled]="seatsc10 === 1" class="sseat"/></td>
+            </tr>
+            <tr>
+              <td><input
+                type="text"
+                value="11" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc11 === 1 ? 'red' : (seats11 === 0 ? 'white' : 'green') }"
+                (click)="onClick11()"
+                [disabled]="seatsc11 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="12" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc12 === 1 ? 'red' : (seats12 === 0 ? 'white' : 'green') }"
+                (click)="onClick12()"
+                [disabled]="seatsc12 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="13" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc13 === 1 ? 'red' : (seats13 === 0 ? 'white' : 'green') }"
+                (click)="onClick13()"
+                [disabled]="seatsc13 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="14" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc14 === 1 ? 'red' : (seats14 === 0 ? 'white' : 'green') }"
+                (click)="onClick14()"
+                [disabled]="seatsc14 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="15" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc15 === 1 ? 'red' : (seats15 === 0 ? 'white' : 'green') }"
+                (click)="onClick15()"
+                [disabled]="seatsc15 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="16" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc16 === 1 ? 'red' : (seats16 === 0 ? 'white' : 'green') }"
+                (click)="onClick16()"
+                [disabled]="seatsc16 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="17" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc17 === 1 ? 'red' : (seats17 === 0 ? 'white' : 'green') }"
+                (click)="onClick17()"
+                [disabled]="seatsc17 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="18" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc18 === 1 ? 'red' : (seats18 === 0 ? 'white' : 'green') }"
+                (click)="onClick18()"
+                [disabled]="seatsc18 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="19" readonly
+                
+                [ngStyle]="{ 'background-color': seatsc19 === 1 ? 'red' : (seats19 === 0 ? 'white' : 'green') }"
+                (click)="onClick19()"
+                [disabled]="seatsc19 === 1" class="sseat"/></td>
+              <td><input
+                type="text"
+                value="20" readonly
+                [ngStyle]="{ 'background-color': seats20 === 0 ? 'white' : 'green' }"[ngStyle]="{ 'background-color': seatsc20 === 1 ? 'red' : (seats20 === 0 ? 'white' : 'green') }"
+                (click)="onClick20()"
+                [disabled]="seatsc20 === 1" class="sseat"/></td>
+            </tr>
+          </table>
+          <div style="text-align: center; margin-left: 3mm; margin-top: 25mm; border-radius: 1mm;
+           border: 2px solid rgb(36, 198, 209); background-color: rgb(145, 155, 201);
+            width: 168mm; height: 7.5mm;"> <p style="padding-top: 1.5mm;">Screen This Side</p></div>
+    </div>
+  <div style="margin-top: 25mm; margin-left: 10mm;">
+   <table>
+    <tr>
+      <td><div style="width: 10mm; height: 10mm; background-color: red; border-radius: 1mm;"></div></td>
+    <td> <h4 style="padding-top: 4mm;"> This Seat is Taken By Someone Else</h4></td>
+    
+    </tr><br>
+    <tr>
+      <td><div style="width: 10mm; height: 10mm; background-color: green; border-radius: 1mm;"></div></td>
+    <td> <h4 style="padding-top: 4mm;"> This Seat is Alloted to You</h4></td>
+
+    </tr><br>
+    <tr>
+      <td><div style="width: 10mm; height: 10mm; background-color: rgb(255, 255, 255); border-radius: 1mm; border: 2px solid grey;"></div></td>
+    <td> <h4 style="padding-top: 4mm;"> This Seat is Availiable </h4></td>
+ 
+    </tr>
+   </table>
+  </div>
+
+ </div>
+    <button [disabled]="!formIsValid" style="background-color: rgb(0, 194, 253);border-radius: 2.5mm; width: 50mm; height: 10mm; text-align: center; margin-left: 150mm;" 
+        (click)="payment()"><b>Proceed to Payment</b>
+</button>
+  

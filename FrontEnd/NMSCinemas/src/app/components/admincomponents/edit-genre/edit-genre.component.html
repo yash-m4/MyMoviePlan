@@ -1,0 +1,10 @@
+<table style="width: 150mm; margin-left: 50mm; border: 2px solid rgb(139, 139, 231);">
+    <tr>
+        <th>Genres</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let genre of genres">
+        <td>{{genre.name}}</td>
+        <td><button id="delete" (click)="deleteCategory(genre.id)">Delete this Genre</button></td>
+    </tr>
+</table>

@@ -1,0 +1,36 @@
+
+    #td1{
+        
+        text-align: center;
+        font-family: monospace;
+        font-size: 5mm;
+        width:80mm ;
+        height: 15mm; 
+    }
+#td2{
+   
+    text-align: center;
+    font-family: monospace;
+    font-size: 5mm;
+    width:70mm ;
+    height: 30mm;   
+}
+
+
+
+#edit{
+    background-color: rgb(40, 182, 11);
+    width: 15mm;
+    height: 7.5mm;
+    border-radius: 1mm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+}
+#delete{
+    background-color: rgb(190, 42, 42);
+    width: 15mm;
+    height: 7.5mm;
+    border-radius: 1mm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+}

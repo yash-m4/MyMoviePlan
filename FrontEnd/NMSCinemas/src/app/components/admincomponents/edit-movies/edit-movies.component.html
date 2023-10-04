@@ -1,0 +1,41 @@
+<div>
+    <div>
+        <h1><b>Edit Movies</b></h1>
+        <table style="border: 2px solid rgb(36, 41, 102); ">
+          <tr>
+            <td id="td1">Id</td>
+            <td id="td1">Poster</td>
+            <td id="td1">Name</td>
+            <td id="td1">Release Date</td>
+            <td id="td1">Price</td>
+            <td id="td1">Slot Selected</td>
+            <td id="td1">Language</td>
+            <td id="td1">Genre</td>
+            <td id="td1">Status</td>
+            <td id="td1">Edit</td>
+            <td id="td1">Delete</td>
+          </tr>
+        </table>
+        <table *ngFor="let movie of movies">
+          <tr>
+            <td id="td2">{{movie.id}}</td>
+            <td id="td2" style="width: 60mm;"><img style="width: 20mm; height: 20mm;" id="b" [src]="getBase64Image(movie.imageData)" alt="Product Image" /></td>
+            <td id="td2">{{movie.name}}</td>
+            <td id="td2"> {{ movie.releaseDate }}</td>
+            <td id="td2">{{ movie.price }}</td>
+            <td id="td2">{{ movie.slots }}</td>
+            <td id="td2">{{ movie.language }}</td>
+            <td style="font-family: monospace; font-size: 5mm;" *ngFor="let genre of genres">
+              <p *ngIf="genre.id === movie.genreId">{{ genre.name }}</p>
+            </td>
+            <td id="td2">{{ movie.status }}<br><button style="background-color: rgb(255, 255, 58); width: 20mm; height: 12mm; border-radius:6mm;" (click)="changeStatus(movie.id)">Change Status</button></td>
+            <td id="td2"><button id="edit" (click)="editProduct(movie.id)">Edit</button></td>
+            <td id="td2"><button id="delete" (click)="deleteProduct(movie.id)">Delete</button></td>
+          </tr>
+        </table>
+      </div>
+      </div>
+    
+    
+    
+    

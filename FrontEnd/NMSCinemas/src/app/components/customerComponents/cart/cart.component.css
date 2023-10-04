@@ -1,0 +1,65 @@
+.container{
+  display: flex;
+}
+#imga{
+  width: 70mm;
+  height: 120mm;
+  margin-left: 3mm;
+}
+#fth{
+width: 40mm;
+padding-left: 5mm;
+padding-right: 5mm;
+padding-top: 5mm;
+padding-bottom: 5mm;
+}
+#ftd{
+width: 40mm;
+text-align: center;
+padding-left: 5mm;
+padding-right: 5mm;
+padding-top: 5mm;
+padding-bottom: 5mm;
+}
+
+/* Style for available seats */
+.available-seat {
+  background-color: green; /* Choose your preferred color */
+  cursor: pointer;
+}
+
+/* Style for taken seats */
+.taken-seat {
+  background-color: red; /* Choose your preferred color */
+  cursor: not-allowed;
+}
+
+/* Style for the seat container */
+.seat-container {
+  margin-top: 20px;
+}
+.sseat{
+  width: 1cm;
+  height:1cm;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+th, td div {
+  width: 33.33%;
+  background-color: lightgray;
+}
+
+
+
+/* Add more styling as needed */
+
+

@@ -1,0 +1,29 @@
+<h1 id="heading">Add Genre Here</h1>
+<div style="display: flex;">
+<div style="width: 50%;">
+<h2 style="padding-left: 10mm; padding-top: 10mm; font-family: Verdana, Geneva, Tahoma, sans-serif;">Some Examples for Movie Genre</h2>
+<ul style="list-style: none; padding-left: 15mm; font-family: monospace; font-size: 5mm;">
+  <li>Horror</li>
+  <li>Action</li>
+  <li>Slice of Life</li>
+  <li>Thriller</li>
+  <li>Drama</li>
+  <li>Comedy</li>
+  <li>Romance</li>
+  <li>Shonen</li>
+  <li>Shoujo</li>
+</ul>
+</div>
+<div class="create-genre" style="width: 50%;">
+    <div class="col" style="padding-top: 40mm;">
+      <legend style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 5mm; padding-left: 36mm; margin-bottom: 4mm;">Genre:</legend>
+        <input style="width: 90mm; height: 10mm; border-radius: 1.5mm; text-align: center; font-family: monospace; font-size: 5mm;" type="text" class="form-control" placeholder="Ex. Horro, SciFi" name="email" [(ngModel)]="genre">
+      </div>
+      <!-- <mat-radio-group aria-label="Select Status" [(ngModel)]="status">
+        <mat-radio-button value='true'>Enabled</mat-radio-button>
+        <mat-radio-button value='false'>Disabled</mat-radio-button>
+      </mat-radio-group><br> -->
+      <br><button [disabled]="!(genre)" style="width: 30mm; height: 10mm; border-radius: 2mm; background-color: rgb(138, 138, 224); margin-left: 30mm;" type="button" (click)="submitForm()">Submit</button>
+
+  </div>
+ </div>

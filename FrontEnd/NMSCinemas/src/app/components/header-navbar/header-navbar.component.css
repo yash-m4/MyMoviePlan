@@ -1,0 +1,31 @@
+.parentDiv{
+    height: 27mm;
+}
+.topHeader{
+    height: 14mm;
+    background-color: rgb(51, 53, 69);
+    display: flex;
+    padding-top: 2mm;
+}
+.bottom-header{
+    height: 9mm;
+    background-color: rgb(31, 37, 51);
+    display: flex;
+
+}
+#form1{
+    width: 150mm;
+    height: 9mm;
+   margin-left: 10MM;
+   border-radius: 2mm;
+    margin-top: 1.5mm;
+    }
+#logo{
+    width: 45mm;
+    height: 13mm;
+margin-left: 15mm;
+}
+.btn-danger{
+width: 25mm;
+}
+

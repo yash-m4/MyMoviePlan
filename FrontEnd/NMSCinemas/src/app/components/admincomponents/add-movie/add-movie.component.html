@@ -1,0 +1,48 @@
+
+
+<div id="one">
+    <div class="col">
+        <label>Enter Movie Name</label><br>
+        <input type="text" class="form-control" placeholder="Ex. Avenegrs, Suzume" name="movie" [(ngModel)]="movie">
+      </div>
+      <div class="col">
+        <label>Enter Ticket Price</label><br>
+        <input type="text" class="form-control" placeholder="Ex. 150₹, 250₹" name="price" [(ngModel)]="price">
+      </div>
+      <div class="col">
+        <label>Release Date</label><br>
+        <input type="date" class="form-control" name="releaseDate" [(ngModel)]="releaseDate">
+      </div>
+      <br>
+      <mat-radio-group aria-label="Select Status" [(ngModel)]="status" style="margin-left: 5mm;">
+        <mat-radio-button value=1>Enabled</mat-radio-button>
+        <mat-radio-button value=0>Disabled</mat-radio-button>
+      </mat-radio-group>
+    <br>
+      <mat-form-field>
+        <mat-label>Select Timings</mat-label>
+        <mat-select [(ngModel)]="selectedSlots" name="selectedSlots">
+        
+          <mat-option *ngFor="let slot of slots" [value]="slot">{{ slot }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Select Available Languages</mat-label>
+        <mat-select [(ngModel)]="selectedLanguages" name="selectedLanguages">
+          
+          <mat-option *ngFor="let language of languages" [value]="language">{{ language }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Select Movie genre</mat-label>
+        <mat-select [(ngModel)]="selectedGenre" name="selectedGenre">
+          <mat-option *ngFor="let genre of genres" [value]="genre.id">{{ genre.name }}</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+      <input type="file"(change)="onImageChange($event)" accept=".jpg, .jpeg, .png"><br><br>
+      <button [disabled]="!(movie && price && releaseDate && status && selectedSlots && selectedLanguages && selectedGenre) "
+       style="margin-left: 5mm; width: 30mm; height: 7mm; background-color: rgb(155, 155, 196); 
+       border-radius: 1mm;" type="button" (click)="submitForm()">Add Movie</button>
+    </div>
